@@ -1,6 +1,6 @@
 # Electrical Machine Winding Simulator
 
-A Python desktop application for designing and visualizing multiphase AC-machine stator windings. It connects winding layouts with EMF phasors, magnetomotive-force distributions and harmonic analysis.
+A Windows desktop application for designing and visualizing multiphase AC-machine stator windings. It connects winding layouts with EMF phasors, magnetomotive-force distributions and harmonic analysis.
 
 ## What it does
 
@@ -32,30 +32,19 @@ Reported MMF profile for the three-phase, 12-slot, one-pole-pair double-layer ex
 
 ![Resultant MMF and phase contributions](docs/results/resultant-mmf.png)
 
-## Tools
+## Download and open the app
 
-Python 3, PyQt5, NumPy, pandas, Matplotlib and openpyxl. Pillow supports icon creation; PyInstaller supports Windows packaging.
+**[Download Winding Simulator for Windows](https://github.com/MouaadO/electrical-winding-simulator/releases/latest/download/Winding_Simulator.exe)**
 
-## Run
+1. Download `Winding_Simulator.exe`.
+2. Double-click the file to open the application.
+3. Explore the Winding Simulator, Voltage Checker, and MMF and Harmonics tabs.
 
-```bash
-python -m pip install -r requirements.txt
-python main.py
-```
+The application includes its runtime, so Python installation is not required.
 
-Explore the Winding Simulator, Voltage Checker, and MMF and Harmonics tabs. To build a Windows application, install PyInstaller and run `pyinstaller winding_simulator.spec`.
+## Tools used to build the app
 
-## Project files
-
-| File | Purpose |
-| --- | --- |
-| `main.py` | Desktop application entry point |
-| `Winding_tab.py`, `StatorDrawing.py` | Winding controls and stator drawing |
-| `winding_pattern_matrix.py`, `explanation.py` | Winding-pattern calculations |
-| `Voltage_tab.py` | Voltage analysis |
-| `MMF_Harmonics_tab.py`, `mmf_calculation_engine.py` | MMF and harmonic analysis |
-| `requirements.txt` | Runtime dependencies |
-| `winding_simulator.spec` | Windows build configuration |
+Python, PyQt5, NumPy, pandas, Matplotlib, openpyxl and PyInstaller.
 
 ## Technical report
 

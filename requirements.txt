@@ -1,6 +1,0 @@
-PyQt5>=5.15,<6
-numpy
-pandas
-matplotlib
-openpyxl
-Pillow
