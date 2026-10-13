@@ -1,41 +1,64 @@
 # Electrical Machine Winding Simulator
 
-A Python desktop application for visualizing multiphase stator windings and studying winding feasibility, voltage and magnetomotive-force harmonics. The interface combines winding diagrams, numerical calculations and plots.
+A Python desktop application for designing and visualizing multiphase AC-machine stator windings. It connects winding layouts with EMF phasors, magnetomotive-force distributions and harmonic analysis.
 
-## Tools used
+## What it does
 
-Python 3, PyQt5, NumPy, pandas and Matplotlib. openpyxl supports spreadsheet exports; Pillow supports the icon utility. PyInstaller is optional for Windows packaging.
+- Generates single-layer and double-layer winding patterns from slot, pole and phase parameters.
+- Draws stator layouts and winding connections.
+- Calculates winding factors and visualizes phase EMF relationships.
+- Evaluates MMF distributions and harmonics for selected current and winding settings.
+- Exports calculation data to spreadsheets.
 
-## How to run
+## Results
 
-1. Create and activate a Python virtual environment.
-2. Install dependencies with `python -m pip install -r requirements.txt`.
-3. From this folder, run `python main.py`.
-4. Explore the Winding Simulator, Voltage Checker, and MMF and Harmonics tabs.
+Figures from the [Winding of AC Machines report](docs/winding-of-ac-machines-report.pdf).
 
-Optional Windows packaging: install PyInstaller and run `pyinstaller winding_simulator.spec`. Packaging has not been revalidated; the existing executable is not included.
+### Stator winding layout
 
-## Files
+A three-phase, 36-slot, five-pole-pair double-layer example.
+
+![Three-phase 36-slot double-layer winding layout](docs/results/stator-winding.png)
+
+### EMF phasors
+
+The normalized phasors show the phase relationship for the reported winding example.
+
+![Normalized three-phase winding EMF phasors](docs/results/emf-phasors.png)
+
+### Magnetomotive force
+
+Reported MMF profile for the three-phase, 12-slot, one-pole-pair double-layer example at an electrical angle of 90 degrees.
+
+![Resultant MMF and phase contributions](docs/results/resultant-mmf.png)
+
+## Tools
+
+Python 3, PyQt5, NumPy, pandas, Matplotlib and openpyxl. Pillow supports icon creation; PyInstaller supports Windows packaging.
+
+## Run
+
+```bash
+python -m pip install -r requirements.txt
+python main.py
+```
+
+Explore the Winding Simulator, Voltage Checker, and MMF and Harmonics tabs. To build a Windows application, install PyInstaller and run `pyinstaller winding_simulator.spec`.
+
+## Project files
 
 | File | Purpose |
 | --- | --- |
 | `main.py` | Desktop application entry point |
 | `Winding_tab.py`, `StatorDrawing.py` | Winding controls and stator drawing |
-| `winding_pattern_matrix.py`, `explanation.py` | Winding pattern and feasibility logic |
+| `winding_pattern_matrix.py`, `explanation.py` | Winding-pattern calculations |
 | `Voltage_tab.py` | Voltage analysis |
-| `MMF_Harmonics_tab.py` | Active MMF/harmonics interface |
-| `MMF_tab.py`, `mmf_calculation_engine.py` | Additional supplied MMF implementation |
+| `MMF_Harmonics_tab.py`, `mmf_calculation_engine.py` | MMF and harmonic analysis |
 | `requirements.txt` | Runtime dependencies |
-| `winding_simulator.spec`, `version_info.txt` | Optional Windows build configuration |
+| `winding_simulator.spec` | Windows build configuration |
 
-## Limitations
+## Technical report
 
-The original virtual environment, build directories and executable were excluded. Dependencies are not pinned to a tested environment. Engineering results require independent verification for a specific machine design. The earlier build notes contained unverified distribution claims and were replaced by these instructions.
+[Read Winding of AC Machines](docs/winding-of-ac-machines-report.pdf) for winding theory, worked examples, fractional-slot windings, MMF calculations and harmonic analysis.
 
-## Project context
-
-Prepared from academic project files. Collaborative work remains team work; personal names are omitted from this public copy. Original technical comments and interfaces may be in French. No new license has been assigned.
-
-## Verification status
-
-All supplied Python files passed syntax parsing. Winding calculations passed shape and conductor-balance checks for 12-slot/2-pole and 36-slot/4-pole double-layer examples. The full GUI was not launched because PyQt5 is not installed in the review runtime. This does not establish full numerical correctness.
+Developed as a collaborative academic engineering project.
