@@ -1,0 +1,27 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+# Local environments and builds
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.exe
+# Generated simulation files
+slprj/
+*.slxc
+*.asv
+*.raw
+*.log
+*.net
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
