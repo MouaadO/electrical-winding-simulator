@@ -1,8 +1,8 @@
 # Electrical Machine Winding Simulator
 
-A Windows desktop application for designing and visualizing multiphase AC-machine stator windings. It connects winding layouts with EMF phasors, magnetomotive-force distributions and harmonic analysis.
+I developed a Windows application to design and visualise multiphase AC-machine stator windings. It calculates winding factors, phase EMF, magnetomotive force and harmonics.
 
-## What it does
+## Main features
 
 - Generates single-layer and double-layer winding patterns from slot, pole and phase parameters.
 - Draws stator layouts and winding connections.
@@ -22,13 +22,13 @@ A three-phase, 36-slot, five-pole-pair double-layer example.
 
 ### EMF phasors
 
-The normalized phasors show the phase relationship for the reported winding example.
+The normalised phasors show the phase relationships for this winding.
 
 ![Normalized three-phase winding EMF phasors](docs/results/emf-phasors.png)
 
 ### Magnetomotive force
 
-Reported MMF profile for the three-phase, 12-slot, one-pole-pair double-layer example at an electrical angle of 90 degrees.
+MMF profile for the three-phase, 12-slot, one-pole-pair double-layer example at an electrical angle of 90 degrees.
 
 ![Resultant MMF and phase contributions](docs/results/resultant-mmf.png)
 
@@ -50,4 +50,4 @@ Python, PyQt5, NumPy, pandas, Matplotlib, openpyxl and PyInstaller.
 
 [Read Winding of AC Machines](docs/winding-of-ac-machines-report.pdf) for winding theory, worked examples, fractional-slot windings, MMF calculations and harmonic analysis.
 
-Developed as a collaborative academic engineering project.
+Academic group project at the National Polytechnic School of Algiers.
